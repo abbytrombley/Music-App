@@ -2,15 +2,29 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Login } from './components/auth/login'
+import { Authorized } from './views/authorized'
+import { ApplicationViews } from './views/applicationViews'
+import { Register } from './components/auth/register'
+import { Route, Routes } from 'react-router-dom'
 
-function App() {
+export const App = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <h1>Hello World</h1>
-    </>
-  )
-}
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-export default App
+      <Route
+        path="*"
+        element={
+          <Authorized>
+            <ApplicationViews />
+          </Authorized>
+        }
+      />
+    </Routes>
+  );
+};
+//return auth, applicationviews
