@@ -35,7 +35,7 @@ export const Login = () => {
       <section>
         <form className="auth-form" onSubmit={handleLogin}>
           <h1 className="header">Digital Music Library</h1>
-          <h2>Please sign in</h2>
+          <h2 className="header">Please sign in</h2>
           <fieldset className="auth-fieldset">
             <div>
               <input

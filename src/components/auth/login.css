@@ -5,7 +5,7 @@
 }
 
 .auth-button{
-    background-color:  #00FE53;
+    background-color:  fuchsia;
 }
 
 .register-link{
@@ -17,3 +17,17 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+.header{
+    color: white
+}
+
+body{
+    background: url(https://i.pinimg.com/564x/06/ab/4c/06ab4c99cc581c1676e1019af05605bc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* https://i.pinimg.com/564x/91/c6/24/91c624c382978122da2670d884063fa8.jpg */
+/* https://i.pinimg.com/564x/89/e4/ea/89e4ea3e7526eb9e05d1f375a9814b02.jpg */

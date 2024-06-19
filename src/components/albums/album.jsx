@@ -49,8 +49,11 @@ export const Albums = ({ currentUser }) => {
                         margin: 5,
                       }}
                     >
-                      <h2>{album.title}</h2>
-                      <p>{album.synopsis}</p>
+                      <h2>{album.albumName}</h2>
+                      <p>{album.artist}</p>
+                      <p>{album.genre}</p>
+                      <p>{album.year}</p>
+                      <p>{album.imageURL}</p>
                       <a href={album.url}>Source</a>
                       <Link to={`/albums/${album.id}/editAlbum`}>
                         <Button color="primary" size="sm" style={{ margin: 5 }}>
@@ -61,8 +64,7 @@ export const Albums = ({ currentUser }) => {
                         color="danger"
                         size="sm"
                         style={{ margin: 5 }}
-                        onClick={() => handleDelete(article)}
-                      >
+                        onClick={() => handleDelete(article)}>
                         Delete
                       </Button>
                     </Card>
