@@ -64,7 +64,7 @@ export const Albums = ({ currentUser }) => {
                         color="danger"
                         size="sm"
                         style={{ margin: 5 }}
-                        onClick={() => handleDelete(article)}>
+                        onClick={() => handleDelete(album)}>
                         Delete
                       </Button>
                     </Card>

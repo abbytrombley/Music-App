@@ -1,150 +1,160 @@
 {
-    "users": [
-         {
-            "id": 1,
-            "username": "Abby",
-            "email": "abby@gmail.com"
-         },
-         {
-            "id": 2,
-            "username": "Scout",
-            "email": "scout@gmail.com"
-        },
-        {
-            "id": 3,
-            "username": "Barry",
-            "email": "barry@gmail.com"
-        },
-        {
-            "id": 4,
-            "username": "Sarah",
-            "email": "sarah@gmail.com"
-        },
-        {
-            "id": 5,
-            "username": "Liam",
-            "email": "liam@gmail.com"
-            }
-        ],
-
-         
-            
-    "albums": [
-      {
-        "id": 1,
-        "userId": "Abby",
-        "albumName": "The Slow Rush",
-        "artist": "Tame Impala",
-        "year": "2020",
-        "genre": "Psychedelic Pop",
-        "imageURL": "https://media.pitchfork.com/photos/63f3dc2d1fb2ca318d15718c/3:2/w_3000,h_2000,c_limit/Tame-Impala-The-Slow-Rush.jpg"
-      },
-      {
-        "id": 2,
-        "userId": "Abby",
-        "albumName": "Live on Red Barn Radio",
-        "artist": "Tyler Childers",
-        "year": "2016",
-        "genre": "Folk, Country",
-        "imageURL": "https://i.scdn.co/image/ab67616d0000b2739cbbbdd15ff65aaab9a611b0"
-      },
-      {
-        "id": 3,
-        "userId": "Abby",
-        "albumName": "Luxury Liner",
-        "artist": "EmmyLou Harris",
-        "year": "1976",
-        "genre": "Country",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/3/3c/Emmylou_Harris_-_Luxury_Liner.png"
-      },
-      {
-        "id": 4,
-        "userId": "Abby",
-        "albumName": "Flying Microtonal Banana",
-        "artist": "King Gizzard & the Lizard Wizard",
-        "year": "2017",
-        "genre": "Psychedelic Rock",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/4/49/Flying_Microtonal_Banana.jpg"
-      },
-      {
-        "id": 5,
-        "userId": "Abby",
-        "albumName": "Standing on the Verge of Getting it On",
-        "artist": "Funkadelic",
-        "year": "1974",
-        "genre": "Funk, Funk-Rock",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/af/Standing_on_the_Verge_of_Getting_It_On.jpg"
-      }
-    ],
-
-      "posts": [
-        {
-            "id": 1,
-            "userId": "Abby",
-            "message": "This is a message",
-            "timestamp": "10:34am"
-        },
-        {
-            "id": 2,
-            "userId": "Abby",
-            "message": "I am writing this to test",
-            "timestamp": "10:35am"
-        },
-        {
-            "id": 3,
-            "userId": "Abby",
-            "message": "Dear Diary",
-            "timestamp": "10:36am"
-        },
-        {
-            "id": 4,
-            "userId": "Abby",
-            "message": "Idk what else to put",
-            "timestamp": "10:37am"
-        },
-        {
-            "id": 5,
-            "userId": "Abby",
-            "message": "Final message is this.",
-            "timestamp": "10:38am"
-        }
-    ],
-
-        "calendar": [
-            {
-                "id": 1,
-                "userId": "Abby",
-                "date": "07/01/2024",
-                "band": "S.G. Goodman",
-                "location": "The Purple Fiddle"
-            },
-            {
-                "id": 2,
-                "userId": "Abby",
-                "date": "08/14/2024",
-                "band": "Tame Impala",
-                "location": "BackBone Farm"
-            },
-            {
-                "id": 3,
-                "userId": "Abby",
-                "date": "08/15/2024",
-                "band": "The Stanley Brothers",
-                "location": "Higher Ground"
-            },
-            {
-                "id": 4,
-                "userId": "Abby",
-                "date": "09/02/2024",
-                "band": "Gillian Welch",
-                "location": "Shelburne Museum"
-            },
-            {
-                "id": 5,
-                "userId": "Abby",
-                "date": "09/21/2024",
-                "band": "Grace Potter",
-                "location": "Higher Ground"
-            }
-        ]
+  "users": [
+    {
+      "id": 1,
+      "username": "Abby",
+      "email": "abby@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Scout",
+      "email": "scout@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "Barry",
+      "email": "barry@gmail.com"
+    },
+    {
+      "id": 4,
+      "username": "Sarah",
+      "email": "sarah@gmail.com"
+    },
+    {
+      "id": 5,
+      "username": "Liam",
+      "email": "liam@gmail.com"
     }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "userId": 1,
+      "albumName": "The Slow Rush",
+      "artist": "Tame Impala",
+      "year": "2020",
+      "genre": "Psychedelic Pop",
+      "imageURL": "https://media.pitchfork.com/photos/63f3dc2d1fb2ca318d15718c/3:2/w_3000,h_2000,c_limit/Tame-Impala-The-Slow-Rush.jpg"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "albumName": "Live on Red Barn Radio",
+      "artist": "Tyler Childers",
+      "year": "2016",
+      "genre": "Folk, Country",
+      "imageURL": "https://i.scdn.co/image/ab67616d0000b2739cbbbdd15ff65aaab9a611b0"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "albumName": "Luxury Liner",
+      "artist": "EmmyLou Harris",
+      "year": "1976",
+      "genre": "Country",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/3/3c/Emmylou_Harris_-_Luxury_Liner.png"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "albumName": "Flying Microtonal Banana",
+      "artist": "King Gizzard & the Lizard Wizard",
+      "year": "2017",
+      "genre": "Psychedelic Rock",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/4/49/Flying_Microtonal_Banana.jpg"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "albumName": "Standing on the Verge of Getting it On",
+      "artist": "Funkadelic",
+      "year": "1974",
+      "genre": "Funk, Funk-Rock",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/af/Standing_on_the_Verge_of_Getting_It_On.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "This is the message",
+      "timestamp": "06/04/2024"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "message": "This is the other message",
+      "timestamp": "06/14/2024"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "message": "A message is...",
+      "timestamp": "06/24/2024"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "message": "Yup, this is a message",
+      "timestamp": "07/04/2024"
+    }
+
+  ],
+  "calendar": [
+    {
+      "id": 1,
+      "userId": 1,
+      "Date": "06/20/2024",
+      "Band": "Tame Impala",
+      "Location": "The Purple Fiddle"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "Date": "06/25/2024",
+      "Band": "S.G. Goodman",
+      "Location": "The Purple Fiddle"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "Date": "07/18/2024",
+      "Band": "Gillian Welch",
+      "Location": "Higher Ground"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "Date": "08/04/2024",
+      "Band": "LSW",
+      "Location": "Preserving Underground"
+    }
+
+  ],
+  "images": [
+    {
+      "id": 1,
+      "url": "https://i.pinimg.com/474x/cb/91/a8/cb91a839011400b168c5822c74600d90.jpg",
+      "caption": "Tame Impala",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "url": "https://i.pinimg.com/474x/d6/dd/39/d6dd39d777e3de2d8cf6e5e68828b34f.jpg",
+      "caption": "Lucinda Williams",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "url": "https://i.pinimg.com/474x/79/5f/dc/795fdccd6398eabd798ac04cd0d29e9f.jpg",
+      "caption": "The Rolling Stones",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "url": "https://i.pinimg.com/474x/94/e8/d1/94e8d14514cc3d3bdc0c91dd71c20f99.jpg",
+      "caption": "King Gizz",
+      "userId": 1
+    }
+  ]
+}

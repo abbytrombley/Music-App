@@ -57,7 +57,7 @@ export const Home = ({ currentUser }) => {
                   >
                     <h2>{post.message}</h2>
                     <p>{post.timestamp}</p>
-                    <a href={post.url}>Source</a>
+                    <a href={post.url}>View User Profile</a>
                   </Card>
                 </Col>
               );
