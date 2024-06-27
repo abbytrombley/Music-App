@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./album.css";
 import { useNavigate } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 import { createAlbum } from "../../services/albumService";
 
 export const NewAlbum = ({currentUser}) => {
   const [newAlbum, setNewAlbum] = useState({
     albumName: "",
-    Artist: "",
-    Genre: "",
-    Year: "",
+    artist: "",
+    genre: "",
+    year: "",
     imageURL: ""
   });
 
@@ -20,9 +20,9 @@ export const NewAlbum = ({currentUser}) => {
 
     const album = {
         albumName: newAlbum.albumName,
-        Artist: newAlbum.artist,
-        Genre: newAlbum.genre,
-        Year: newAlbum.year,
+        artist: newAlbum.artist,
+        genre: newAlbum.genre,
+        year: newAlbum.year,
         imageURL: newAlbum.imageURL,
         userId: currentUser.id
     }
@@ -44,7 +44,7 @@ export const NewAlbum = ({currentUser}) => {
             onChange={(event) => {
               const albumCopy = { ...newAlbum };
               albumCopy.albumName = event.target.value;
-              setNewArticle(albumCopy);
+              setNewAlbum(albumCopy);
             }}
           ></input>
         </fieldset>

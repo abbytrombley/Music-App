@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "reactstrap";
 import { getCalendarById, updateCalendar } from "../../services/calendarService";
+import "./calendar.css";
 
 
 export const EditCalendar = () => {
@@ -62,7 +63,7 @@ export const EditCalendar = () => {
         <fieldset>
           <div className="form-title">
             <input
-              text="text"
+              type="date"
               className="form-control"
               placeholder={calendar.date}
               onChange={(event) => {

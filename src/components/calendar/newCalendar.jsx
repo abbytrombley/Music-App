@@ -59,7 +59,7 @@ export const NewCalendar = ({currentUser}) => {
         </fieldset>
         <fieldset>
           <input
-            text="text"
+            type="date"
             className="form-control"
             placeholder="Date"
             onChange={(event) => {

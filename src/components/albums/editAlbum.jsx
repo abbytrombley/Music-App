@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "reactstrap";
 import { getAlbumById, updateAlbum } from "../../services/albumService";
+import "./album.css";
 
 export const EditAlbum = () => {
-  const [Album, setAlbum] = useState({});
+  const [album, setAlbum] = useState({});
   const { albumId } = useParams();
 
   useEffect(() => {

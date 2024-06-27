@@ -19,6 +19,10 @@ export const Home = ({ currentUser }) => {
   }, []);
 
   useEffect(() => {
+    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/06/ab/4c/06ab4c99cc581c1676e1019af05605bc.jpg)`
+  } , [])
+
+  useEffect(() => {
     const foundPosts = posts.filter(
       (post) => post.userId === currentUser.id
     );

@@ -16,6 +16,10 @@ export const ImageGallery = ({ currentUser }) => {
         })
     }, []);
 
+    useEffect(() => {
+        document.body.style.backgroundImage = `url(https://i.pinimg.com/736x/2b/03/06/2b0306957f5640699fc82add113da34a.jpg)`
+      } , [])
+
     {/* Filter Images by User */}
     useEffect(() => {
         const foundImages = images.filter((image) => image.userId === currentUser.id)
@@ -33,9 +37,6 @@ export const ImageGallery = ({ currentUser }) => {
     // JSX to display allImages Gallery using Reactstrap
     return (
         <>
-        <div>
-                <Link to={`/images/newImage`}><button className="button">Add New Image</button></Link>
-        </div>
         <div className="images">
             <div>
                 <Row>
@@ -50,7 +51,7 @@ export const ImageGallery = ({ currentUser }) => {
                     }}
                 >
                     
-                    <img src={image.url} alt={image.caption} />
+                    <img className="gallery-images" src={image.url} alt={image.caption} />
                     
                 <CardBody>
                     <CardSubtitle
@@ -61,7 +62,7 @@ export const ImageGallery = ({ currentUser }) => {
                     </CardSubtitle>
 
                     {/* Edit Image Button */}
-                    <Link to={`/editImages/${image.id}`}>
+                    <Link to={`/images/editImages/${image.id}`}>
                         <Button color="primary" size="sm" style={{margin: 5}}>
                             Edit
                         </Button>
@@ -81,6 +82,9 @@ export const ImageGallery = ({ currentUser }) => {
                 
                 </Row>
             </div>
+            <div>
+                <Link to={`/images/newImage`}><button className="button">Add New Image</button></Link>
+        </div>
         </div>
         </>
     )

@@ -1,0 +1,30 @@
+.albums{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.single-album{
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+fieldset{
+    margin: 10px;
+}
+
+/* .albums{
+    background: url(https://i.pinimg.com/474x/91/c1/f5/91c1f5f96ede0e2206b8d795192d91a5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+.album-images{
+    width: 100%;
+    height: 100%;
+}
+
+
+

@@ -5,3 +5,14 @@
     align-items: center;
 }
 
+/* .images{
+    background: url(https://i.pinimg.com/564x/99/9c/61/999c61eb5cbe43859a9043b0fee7f3e3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+.gallery-images{
+    width: 100%;
+    height: 100%;
+}

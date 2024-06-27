@@ -1,0 +1,21 @@
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: auto;
+    background-color: lavender;
+    border-style: outset;
+    border-radius: 25px;
+    border-color: white;
+    border-width: 5px;
+    font-family: sans-serif;
+
+}
+
+.navbar-item {
+    color: fuchsia;
+    text-align: center;
+    margin: 10px;
+}

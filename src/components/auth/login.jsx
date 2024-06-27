@@ -3,15 +3,23 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "./login.css"
 import { getUserByEmail } from "../../services/userService"
+import { useEffect } from "react"
+
 
 
 
 export const Login = () => {
+
   const [email, set] = useState("")
+
   const navigate = useNavigate()
+  
+  useEffect(() => {
+    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/06/ab/4c/06ab4c99cc581c1676e1019af05605bc.jpg)`
+  } , [])
 
   const handleLogin = (e) => {
-    e.preventDefault()
+    e.preventDefault()  
 
     return getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {

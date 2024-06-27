@@ -2,10 +2,11 @@ import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, Col, Row } from "reactstrap";
-import { getAllCalendar } from "../../services/calendarService";
+import { deleteCalendar, getAllCalendar } from "../../services/calendarService";
+import "./calendar.css";
 
 
-export const calendar = ({ currentUser }) => {
+export const Calendar = ({ currentUser }) => {
     const [calendar, setCalendar] = useState([]);
     const [myCalendar, setMyCalendar] = useState([]);
   
@@ -14,6 +15,10 @@ export const calendar = ({ currentUser }) => {
         setCalendar(calendarArray);
       });
     }, []);
+
+    useEffect(() => {
+      document.body.style.backgroundImage = `url(https://i.pinimg.com/474x/0b/c4/12/0bc412c5af40c081f283c80fc0048918.jpg)`
+    } , [])
   
     useEffect(() => {
       const foundCalendar = calendar.filter(
@@ -31,12 +36,7 @@ export const calendar = ({ currentUser }) => {
     };
   
     return (
-      <div>
         <div>
-          <Link to="/newCalendar">
-            <button className="button">Add Upcoming Event</button>
-          </Link>
-        </div>
         <div className="calendar">
           <div>
             <Row className="flex-row-reverse">
@@ -51,8 +51,8 @@ export const calendar = ({ currentUser }) => {
                       }}
                     >
                       <h2>{calendar.Band}</h2>
-                      <p>{calendar.location}</p>
-                      <p>{calendar.date}</p>
+                      <p>{calendar.Location}</p>
+                      <p>{calendar.Date}</p>
                       <Link to={`/calendar/${calendar.id}/editCalendar`}>
                         <Button color="primary" size="sm" style={{ margin: 5 }}>
                           Edit
@@ -71,6 +71,11 @@ export const calendar = ({ currentUser }) => {
               })}
             </Row>
           </div>
+        </div>
+        <div>
+          <Link to="/calendar/newCalendar">
+            <button className="button">Add Upcoming Event</button>
+          </Link>
         </div>
       </div>
     );

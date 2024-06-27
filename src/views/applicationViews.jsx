@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react"
-import { Outlet, Route, Routes } from "react-router-dom"
-import { MyNavBar } from "../components/nav/nav";
+import { useEffect, useState } from "react";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { Home } from "../components/home/home";
 import { Albums } from "../components/albums/album";
 import { EditAlbum } from "../components/albums/editAlbum";
@@ -10,73 +9,80 @@ import { UpdateImage } from "../components/images/updateImage";
 import { EditCalendar } from "../components/calendar/editCalendar";
 import { NewCalendar } from "../components/calendar/newCalendar";
 import { NewAlbum } from "../components/albums/newAlbum";
-
-
-
-
-
-
-
+import { Calendar } from "../components/calendar/calendar";
+import { MyNavBar } from "../components/nav/nav";
+import { NewPost } from "../components/posts/newPost";
+import { EditPost } from "../components/posts/editPost";
+import { Posts } from "../components/posts/posts";
 
 export const ApplicationViews = () => {
-  const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    const localShellUser = localStorage.getItem("music_user")
-    const shellUserObject = JSON.parse(localShellUser)
+    const localShellUser = localStorage.getItem("music_user");
+    const shellUserObject = JSON.parse(localShellUser);
 
-    setCurrentUser(shellUserObject)
-  }, [])
+    setCurrentUser(shellUserObject);
+  }, []);
 
   return (
     <Routes>
-    <Route
-      path="/"
-      element={
-        <>
-          <MyNavBar />
-          <Outlet />
-        </>
-      }
-    >
-    <Route path="/" element={<Home currentUser={currentUser} />} />
-      <Route path="albums">
-        <Route index element={<Albums currentUser={currentUser} />} />
-        <Route
-          path=":albumId/editAlbum"
-          element={<EditAlbum currentUser={currentUser} />}
-        />
-        <Route
-          path=":albumId/newAlbum"
-          element={<NewAlbum currentUser={currentUser} />}
-        />
-      </Route>
-      <Route path="images">
+      <Route
+        path="/"
+        element={
+          <>
+            <MyNavBar />
+            <Outlet />
+          </>
+        }
+      >
+        <Route path="/" element={<Home currentUser={currentUser} />} />
+        <Route path="albums">
+          <Route index element={<Albums currentUser={currentUser} />} />
+          <Route
+            path=":albumId/editAlbum"
+            element={<EditAlbum currentUser={currentUser} />}
+          />
+          <Route
+            path="newAlbum"
+            element={<NewAlbum currentUser={currentUser} />}
+          />
+        </Route>
+        <Route path="images">
           <Route index element={<ImageGallery currentUser={currentUser} />} />
           <Route
             path="newImage"
             element={<NewImage currentUser={currentUser} />}
           />
-           <Route
-          path="editImages/:imageId"
-          element={<UpdateImage currentUser={currentUser} />}
-        /> 
+          <Route
+            path="editImages/:imageId"
+            element={<UpdateImage currentUser={currentUser} />}
+          />
+          </Route>
         <Route path="calendar">
-        <Route index element={<Calendar currentUser={currentUser} />} />
+            <Route index element={<Calendar currentUser={currentUser} />} />
+            <Route
+              path=":calendarId/editCalendar"
+              element={<EditCalendar currentUser={currentUser} />}
+            />
+            <Route
+              path="newCalendar"
+              element={<NewCalendar currentUser={currentUser} />}
+            />
+          </Route>
+          <Route path="posts">
+        <Route index element={<Posts currentUser={currentUser} />} />
         <Route
-          path=":calendarId/editCalendar"
-          element={<EditCalendar currentUser={currentUser} />}
+          path=":postId/editPost"
+          element={<EditPost currentUser={currentUser} />}
         />
-        <Route
-          path=":calendarId/newCalendar"
-          element={<NewCalendar currentUser={currentUser} />}
-        />
+         <Route
+        path="newPost"
+        element={<NewPost currentUser={currentUser} />}
+      />
       </Route>
-
-
-      </Route> 
+     
       </Route>
-  </Routes>
-);
+    </Routes>
+  );
 };
-
