@@ -17,12 +17,14 @@ export const NewPost = ({currentUser}) => {
     event.preventDefault()
 
     const post = {
-        message: newPost.message,
+        postImage: newPost.postImage,
+        caption: newPost.caption,
+        likes: newPost.likes,
         timestamp: newPost.timestamp,
         userId: currentUser.id
     }
     createPost(post).then(() => {
-        navigate("/posts")
+        navigate("/post") //I SWITCHED THIS TO POST INSTEAD OF POSTS
     })
 
   }
@@ -30,15 +32,27 @@ export const NewPost = ({currentUser}) => {
   return (
     <div className="form">
       <form className="post-form">
-        <h2>New Post</h2>
+        <h2 className="new__post">New Post</h2>
         <fieldset>
           <input
             text="text"
             className="form-control"
-            placeholder="Post Name"
+            placeholder="Post Image URL"
             onChange={(event) => {
               const postCopy = { ...newPost };
-              postCopy.message = event.target.value;
+              postCopy.postImage = event.target.value;
+              setNewPost(postCopy);
+            }}
+          ></input>
+        </fieldset>
+        <fieldset>
+          <input
+            text="text"
+            className="form-control"
+            placeholder="Caption"
+            onChange={(event) => {
+              const postCopy = { ...newPost };
+              postCopy.caption = event.target.value;
               setNewPost(postCopy);
             }}
           ></input>

@@ -18,7 +18,7 @@ export const Register = (props) => {
     createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "nutshell_user",
+          "music_user",
           JSON.stringify({
             id: createdUser.id
           })

@@ -48,7 +48,7 @@ export const UpdateImage = ({ currentUser }) => {
   return (
     <div className="form">
       <Form className="article-form">
-        <h2>Edit Image</h2>
+        <h2 className="edit__images">Edit Image</h2>
         <FormGroup>
           <Input
             id="exampleUrl"

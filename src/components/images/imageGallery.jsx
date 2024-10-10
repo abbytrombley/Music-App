@@ -39,6 +39,7 @@ export const ImageGallery = ({ currentUser }) => {
         <>
         <div className="images">
             <div>
+            <h2 className="title">PERSONAL IMAGE GALLERY</h2>
                 <Row>
                 
                 {myImages.map((image) => {

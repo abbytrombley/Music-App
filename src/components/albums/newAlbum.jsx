@@ -35,7 +35,7 @@ export const NewAlbum = ({currentUser}) => {
   return (
     <div className="form">
       <form className="album-form">
-        <h2>New Album</h2>
+        <h2 className="new__albums">New Album</h2>
         <fieldset>
           <input
             text="text"

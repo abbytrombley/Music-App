@@ -31,7 +31,7 @@ export const NewImage = ({ currentUser }) => {
     return (
         <div className="form">
             <Form className="article-form">
-            <h2>New Image</h2>
+            <h2 className="new__images">New Image</h2>
                 <FormGroup>
                     <Input
                         id="exampleUrl"

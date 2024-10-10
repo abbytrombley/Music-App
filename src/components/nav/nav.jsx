@@ -29,7 +29,7 @@ export const MyNavBar = () => {
     </li>
     
     <li className="navbar-item">
-      <Link to="posts" className="navbar-item">
+      <Link to="post" className="navbar-item">
         Posts
       </Link>
     </li>
@@ -40,15 +40,21 @@ export const MyNavBar = () => {
       </Link>
     </li>
     
-    <li className="navbar-item">
+    {/* <li className="navbar-item">
       <Link to="calendar" className="navbar-item">
         Calendar
       </Link>
-    </li>
+    </li> */}
 
     <li className="navbar-item">
       <Link to="images" className="navbar-item">
         Images
+      </Link>
+    </li>
+
+    <li className="navbar-item">
+      <Link to="calendarApp" className="navbar-item">
+        Calendar
       </Link>
     </li>
     
@@ -66,6 +72,21 @@ export const MyNavBar = () => {
   </header>
 );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   

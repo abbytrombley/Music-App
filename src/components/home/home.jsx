@@ -19,7 +19,7 @@ export const Home = ({ currentUser }) => {
   }, []);
 
   useEffect(() => {
-    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/06/ab/4c/06ab4c99cc581c1676e1019af05605bc.jpg)`
+    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/52/9d/13/529d132ace2e59bdf2ed756c3ea6cb2b.jpg)`
   } , [])
 
   useEffect(() => {

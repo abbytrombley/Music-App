@@ -38,6 +38,7 @@ export const Albums = ({ currentUser }) => {
       <div className="album-test">
         <div className="albums">
           <div>
+          <h2 className="title_albums">PERSONAL ALBUM COLLECTION</h2>
             <Row className="flex-row">
               {myAlbums.map((album) => {
                 return (

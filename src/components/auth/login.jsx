@@ -15,7 +15,7 @@ export const Login = () => {
   const navigate = useNavigate()
   
   useEffect(() => {
-    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/06/ab/4c/06ab4c99cc581c1676e1019af05605bc.jpg)`
+    document.body.style.backgroundImage = `url(https://i.pinimg.com/736x/c1/d3/56/c1d356fab1905c44cb8943b2442fc83f.jpg)`
   } , [])
 
   const handleLogin = (e) => {

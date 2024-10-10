@@ -18,10 +18,11 @@ export const EditAlbum = () => {
   const handleSave = (event) => {
     event.preventDefault();
     const editedAlbum = {
-      Name: album.albumName,
-      Artist: album.artist,
-      Year: album.year,
-      Genre: album.genre,
+      id: album.id,
+      albumName: album.albumName,
+      artist: album.artist,
+      year: album.year,
+      genre: album.genre,
       userId: album.userId,
       imageURL: album.imageURL,
     };
@@ -33,7 +34,7 @@ export const EditAlbum = () => {
   return (
     <div className="form">
       <form>
-        <h2>Edit Album</h2>
+        <h2 className="edit__albums">Edit Album</h2>
         <fieldset>
           <div className="form-title">
             <input
