@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "reactstrap";
 import { getAlbumById, updateAlbum } from "../../services/albumService";
+import "./album.css";
 
 export const EditAlbum = () => {
-  const [Album, setAlbum] = useState({});
+  const [album, setAlbum] = useState({});
   const { albumId } = useParams();
 
   useEffect(() => {
@@ -17,10 +18,11 @@ export const EditAlbum = () => {
   const handleSave = (event) => {
     event.preventDefault();
     const editedAlbum = {
-      Name: album.albumName,
-      Artist: album.artist,
-      Year: album.year,
-      Genre: album.genre,
+      id: album.id,
+      albumName: album.albumName,
+      artist: album.artist,
+      year: album.year,
+      genre: album.genre,
       userId: album.userId,
       imageURL: album.imageURL,
     };
@@ -32,7 +34,7 @@ export const EditAlbum = () => {
   return (
     <div className="form">
       <form>
-        <h2>Edit Album</h2>
+        <h2 className="edit__albums">Edit Album</h2>
         <fieldset>
           <div className="form-title">
             <input

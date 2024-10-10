@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, Col, Row } from "reactstrap";
-import { getAllAlbums } from "../../services/albumService";
+import { deleteAlbum, getAllAlbums } from "../../services/albumService";
+import "./album.css";
 
 export const Albums = ({ currentUser }) => {
     const [albums, setAlbums] = useState([]);
@@ -20,9 +21,13 @@ export const Albums = ({ currentUser }) => {
       );
       setMyAlbums(foundAlbums);
     }, [albums]);
+
+    useEffect(() => {
+      document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/27/0a/f0/270af01a1674dd031c9c22298dd1c71d.jpg)`
+    } , [])
   
-    const handleDelete = (album) => {
-      deleteAlbum(album.id).then(() => {
+    const handleDelete = (albumId) => {
+      deleteAlbum(albumId).then(() => {
         getAllAlbums().then((albumsArray) => {
           setAlbums(albumsArray);
         });
@@ -30,15 +35,11 @@ export const Albums = ({ currentUser }) => {
     };
   
     return (
-      <div>
-        <div>
-          <Link to="/newAlbum">
-            <button className="button">Log New Album</button>
-          </Link>
-        </div>
+      <div className="album-test">
         <div className="albums">
           <div>
-            <Row className="flex-row-reverse">
+          <h2 className="title_albums">PERSONAL ALBUM COLLECTION</h2>
+            <Row className="flex-row">
               {myAlbums.map((album) => {
                 return (
                   <Col key={album.id}>
@@ -49,9 +50,12 @@ export const Albums = ({ currentUser }) => {
                         margin: 5,
                       }}
                     >
-                      <h2>{album.title}</h2>
-                      <p>{album.synopsis}</p>
-                      <a href={album.url}>Source</a>
+                      <h2>{album.albumName}</h2>
+                      <p>{album.artist}</p>
+                      <p>{album.genre}</p>
+                      <p>{album.year}</p>
+                      <img className="album-images" src={album.imageURL} alt={album.artist}/>
+                      {/* <a href={album.url}>Source</a> */}
                       <Link to={`/albums/${album.id}/editAlbum`}>
                         <Button color="primary" size="sm" style={{ margin: 5 }}>
                           Edit
@@ -61,8 +65,7 @@ export const Albums = ({ currentUser }) => {
                         color="danger"
                         size="sm"
                         style={{ margin: 5 }}
-                        onClick={() => handleDelete(article)}
-                      >
+                        onClick={() => handleDelete(album.id)}>
                         Delete
                       </Button>
                     </Card>
@@ -71,6 +74,11 @@ export const Albums = ({ currentUser }) => {
               })}
             </Row>
           </div>
+        </div>
+        <div>
+          <Link to="/albums/newAlbum">
+            <button className="button">Log New Album</button>
+          </Link>
         </div>
       </div>
     );

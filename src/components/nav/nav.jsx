@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import "./nav.css";
 import {
   Collapse,
   Navbar,
@@ -15,36 +16,82 @@ export const MyNavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
 
   const navigate =useNavigate()
 
   return (
-    <div>
-      <Navbar>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownMenu end>
-                <DropdownItem onClick={() => {navigate("/")}}>Home</DropdownItem>
-                <DropdownItem onClick={() => {navigate("/posts")}}>Posts</DropdownItem>
-                <DropdownItem
-                onClick={()=>{navigate("/albums")}}>Albums</DropdownItem>
-                <DropdownItem
-                onClick={() => {navigate("/calendar")}}>Calendar</DropdownItem>
-                 <DropdownItem
-                 onClick={() => {navigate("/images")}}>Images</DropdownItem>
-                {localStorage.getItem("nutshell_user")? "" : <DropdownItem onClick={() => {navigate("/login")}}>Login</DropdownItem>}
-                <DropdownItem divider />
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
+  <header>
+  <ul className="navbar">
+    <li className="navbar-item">
+      <Link to="/" className="navbar-item">
+        Home
+      </Link>
+    </li>
+    
+    <li className="navbar-item">
+      <Link to="post" className="navbar-item">
+        Posts
+      </Link>
+    </li>
+    
+    <li className="navbar-item">
+      <Link to="albums" className="navbar-item">
+        Albums
+      </Link>
+    </li>
+    
+    {/* <li className="navbar-item">
+      <Link to="calendar" className="navbar-item">
+        Calendar
+      </Link>
+    </li> */}
+
+    <li className="navbar-item">
+      <Link to="images" className="navbar-item">
+        Images
+      </Link>
+    </li>
+
+    <li className="navbar-item">
+      <Link to="calendarApp" className="navbar-item">
+        Calendar
+      </Link>
+    </li>
+    
+    <li className="navbar-item">
+      <Link className="navbar-item" to=""
+      onClick={() => {
+        localStorage.removeItem("music_user")
+        navigate("/login", {replace: true})
+      }}
+      >
+        Logout
+      </Link>
+    </li>
+  </ul>
+  </header>
+);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
 
 
 
@@ -95,4 +142,52 @@ export const MyNavBar = () => {
 //         </Navbar>
 //     </div>
 //   );
+// }
+
+//SETH EXAMPLE
+// return (
+//   <header>
+//   <ul className="navbar">
+//     <li className="navbar-item">
+//       <Link to="/" className="navbar-item">
+//         Home
+//       </Link>
+//     </li>
+//     |
+//     <li className="navbar-item">
+//       <Link to="posts" className="navbar-item">
+//         Posts
+//       </Link>
+//     </li>
+//     |
+//     <li className="navbar-item">
+//       <Link to="albums" className="navbar-item">
+//         Albums
+//       </Link>
+//     </li>
+//     |
+//     <li className="navbar-item">
+//       <Link to="calendar" className="navbar-item">
+//         Calendar
+//       </Link>
+//     </li>|
+//     <li className="navbar-item">
+//       <Link to="images" className="navbar-item">
+//         Images
+//       </Link>
+//     </li>
+//     |
+//     <li className="navbar-item">
+//       <Link className="navbar-item" to=""
+//       onClick={() => {
+//         localStorage.removeItem("music_user")
+//         navigate("/login", {replace: true})
+//       }}
+//       >
+//         Logout
+//       </Link>
+//     </li>
+//   </ul>
+//   </header>
+// );
 // }

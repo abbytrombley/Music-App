@@ -18,7 +18,7 @@ export const Register = (props) => {
     createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "nutshell_user",
+          "music_user",
           JSON.stringify({
             id: createdUser.id
           })
@@ -51,8 +51,8 @@ export const Register = (props) => {
   return (
     <main className="auth-container">
       <form className="auth-form" onSubmit={handleRegister}>
-        <h1 className="header">Welcome to Nutshell</h1>
-        <h2>Please Register</h2>
+        <h1 className="header">Welcome to Your New Digital Music Library</h1>
+        <h2 className="header">Please Register</h2>
         <fieldset className="auth-fieldset">
           <div>
             <input

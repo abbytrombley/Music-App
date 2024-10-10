@@ -8,10 +8,16 @@ import { ApplicationViews } from './views/applicationViews'
 import { Register } from './components/auth/register'
 import { Route, Routes } from 'react-router-dom'
 
+
 export const App = () => {
   const [count, setCount] = useState(0)
 
   return (
+
+    // <div className='container'>
+    //   <CalendarApp />
+    // </div>
+
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
@@ -27,4 +33,4 @@ export const App = () => {
     </Routes>
   );
 };
-//return auth, applicationviews
+

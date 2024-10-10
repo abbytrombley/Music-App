@@ -1,150 +1,302 @@
 {
-    "users": [
-         {
-            "id": 1,
-            "username": "Abby",
-            "email": "abby@gmail.com"
-         },
-         {
-            "id": 2,
-            "username": "Scout",
-            "email": "scout@gmail.com"
-        },
-        {
-            "id": 3,
-            "username": "Barry",
-            "email": "barry@gmail.com"
-        },
-        {
-            "id": 4,
-            "username": "Sarah",
-            "email": "sarah@gmail.com"
-        },
-        {
-            "id": 5,
-            "username": "Liam",
-            "email": "liam@gmail.com"
-            }
-        ],
-
-         
-            
-    "albums": [
-      {
-        "id": 1,
-        "userId": "Abby",
-        "albumName": "The Slow Rush",
-        "artist": "Tame Impala",
-        "year": "2020",
-        "genre": "Psychedelic Pop",
-        "imageURL": "https://media.pitchfork.com/photos/63f3dc2d1fb2ca318d15718c/3:2/w_3000,h_2000,c_limit/Tame-Impala-The-Slow-Rush.jpg"
-      },
-      {
-        "id": 2,
-        "userId": "Abby",
-        "albumName": "Live on Red Barn Radio",
-        "artist": "Tyler Childers",
-        "year": "2016",
-        "genre": "Folk, Country",
-        "imageURL": "https://i.scdn.co/image/ab67616d0000b2739cbbbdd15ff65aaab9a611b0"
-      },
-      {
-        "id": 3,
-        "userId": "Abby",
-        "albumName": "Luxury Liner",
-        "artist": "EmmyLou Harris",
-        "year": "1976",
-        "genre": "Country",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/3/3c/Emmylou_Harris_-_Luxury_Liner.png"
-      },
-      {
-        "id": 4,
-        "userId": "Abby",
-        "albumName": "Flying Microtonal Banana",
-        "artist": "King Gizzard & the Lizard Wizard",
-        "year": "2017",
-        "genre": "Psychedelic Rock",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/4/49/Flying_Microtonal_Banana.jpg"
-      },
-      {
-        "id": 5,
-        "userId": "Abby",
-        "albumName": "Standing on the Verge of Getting it On",
-        "artist": "Funkadelic",
-        "year": "1974",
-        "genre": "Funk, Funk-Rock",
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/af/Standing_on_the_Verge_of_Getting_It_On.jpg"
-      }
-    ],
-
-      "posts": [
-        {
-            "id": 1,
-            "userId": "Abby",
-            "message": "This is a message",
-            "timestamp": "10:34am"
-        },
-        {
-            "id": 2,
-            "userId": "Abby",
-            "message": "I am writing this to test",
-            "timestamp": "10:35am"
-        },
-        {
-            "id": 3,
-            "userId": "Abby",
-            "message": "Dear Diary",
-            "timestamp": "10:36am"
-        },
-        {
-            "id": 4,
-            "userId": "Abby",
-            "message": "Idk what else to put",
-            "timestamp": "10:37am"
-        },
-        {
-            "id": 5,
-            "userId": "Abby",
-            "message": "Final message is this.",
-            "timestamp": "10:38am"
-        }
-    ],
-
-        "calendar": [
-            {
-                "id": 1,
-                "userId": "Abby",
-                "date": "07/01/2024",
-                "band": "S.G. Goodman",
-                "location": "The Purple Fiddle"
-            },
-            {
-                "id": 2,
-                "userId": "Abby",
-                "date": "08/14/2024",
-                "band": "Tame Impala",
-                "location": "BackBone Farm"
-            },
-            {
-                "id": 3,
-                "userId": "Abby",
-                "date": "08/15/2024",
-                "band": "The Stanley Brothers",
-                "location": "Higher Ground"
-            },
-            {
-                "id": 4,
-                "userId": "Abby",
-                "date": "09/02/2024",
-                "band": "Gillian Welch",
-                "location": "Shelburne Museum"
-            },
-            {
-                "id": 5,
-                "userId": "Abby",
-                "date": "09/21/2024",
-                "band": "Grace Potter",
-                "location": "Higher Ground"
-            }
-        ]
+  "users": [
+    {
+      "id": 1,
+      "username": "Abby",
+      "email": "abby@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Scout",
+      "email": "scout@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "Barry",
+      "email": "barry@gmail.com"
+    },
+    {
+      "id": 4,
+      "username": "Sarah",
+      "email": "sarah@gmail.com"
+    },
+    {
+      "id": 5,
+      "username": "Liam",
+      "email": "liam@gmail.com"
+    },
+    {
+      "email": "Kyle@gmail.com",
+      "username": "Kyle",
+      "id": 6
+    },
+    {
+      "email": "friend@gmail.com",
+      "username": "friend",
+      "id": 7
+    },
+    {
+      "email": "katherine@gmail.com",
+      "username": "katherine",
+      "id": 8
+    },
+    {
+      "email": "chelsea@gmail.com",
+      "username": "chelsea",
+      "id": 9
     }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "albumName": "The Slow Rush",
+      "artist": "Tame Impala",
+      "year": "2020",
+      "genre": "Psychedelic Pop",
+      "userId": 1,
+      "imageURL": "https://media.pitchfork.com/photos/63f3dc2d1fb2ca318d15718c/3:2/w_3000,h_2000,c_limit/Tame-Impala-The-Slow-Rush.jpg"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "albumName": "Live on Red Barn Radio",
+      "artist": "Tyler Childers",
+      "year": "2016",
+      "genre": "Folk, Country",
+      "imageURL": "https://i.scdn.co/image/ab67616d0000b2739cbbbdd15ff65aaab9a611b0"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "albumName": "Luxury Liner",
+      "artist": "EmmyLou Harris",
+      "year": "1976",
+      "genre": "Country",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/3/3c/Emmylou_Harris_-_Luxury_Liner.png"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "albumName": "Flying Microtonal Banana",
+      "artist": "King Gizzard & the Lizard Wizard",
+      "year": "2017",
+      "genre": "Psychedelic Rock",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/4/49/Flying_Microtonal_Banana.jpg"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "albumName": "Standing on the Verge of Getting it On",
+      "artist": "Funkadelic",
+      "year": "1974",
+      "genre": "Funk, Funk-Rock",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/af/Standing_on_the_Verge_of_Getting_It_On.jpg"
+    },
+    {
+      "albumName": "The Miseducation of Lauryn Hill",
+      "artist": "Lauryn Hill",
+      "genre": "R&B",
+      "year": "1998",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/5/55/LaurynHillTheMiseducationofLaurynHillalbumcover.jpg",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "albumName": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+      "artist": "David Bowie",
+      "genre": "Rock",
+      "year": "1972",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "albumName": "World Without Tears",
+      "artist": "Lucinda Williams",
+      "genre": "Rock/Folk",
+      "year": "2003",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/World_Without_Tears.jpg/220px-World_Without_Tears.jpg",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "albumName": "Tapestry",
+      "artist": "Carole King",
+      "genre": "Folk Rock",
+      "year": "1971",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/5/52/Carole_King_-_Tapestry.jpg",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "id": 10,
+      "albumName": "Master of Reality",
+      "artist": "Black Sabbath",
+      "year": "1973",
+      "genre": "Metal",
+      "userId": 1,
+      "imageURL": "https://i.pinimg.com/474x/8b/03/7b/8b037b37ad7330aa47f77fc8a791e946.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "postImage": "https://i.pinimg.com/474x/7f/57/f3/7f57f35ab113c3ce26cedd2107d08176.jpg",
+      "caption": "Caption",
+      "likes": 12,
+      "timestamp": "2024-07-03",
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "postImage": "https://i.pinimg.com/474x/a5/e9/f5/a5e9f59e8f2dea67bf44aadd009dbfac.jpg",
+      "caption": "Tour Dates",
+      "likes": 120,
+      "timestamp": "2024-07-03",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "postImage": "https://i.pinimg.com/736x/ab/d7/92/abd7921535b094d9eb0ed570155768d5.jpg",
+      "caption": "Stevie Nicks",
+      "likes": 12,
+      "timestamp": "2024-07-03",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "postImage": "https://i.pinimg.com/474x/89/74/16/8974168ce5353674f1417134fe47528d.jpg",
+      "caption": "Rufus",
+      "timestamp": "2024-07-03",
+      "userId": 1
+    },
+    {
+      "postImage": "https://i.pinimg.com/474x/e8/9d/52/e89d52e6b735fe517ddcd6bce5a831e7.jpg",
+      "caption": "Peach Pit",
+      "timestamp": "2024-07-03",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "postImage": "https://i.pinimg.com/474x/a3/95/a5/a395a56e792cad4f39dae342a0b5ba31.jpg",
+      "timestamp": "2024-07-03",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "postImage": "https://i.pinimg.com/474x/68/dc/0f/68dc0fc5d63a49e06852ad7f399166a9.jpg",
+      "timestamp": "2024-07-02",
+      "userId": 2
+    },
+    {
+      "id": 9,
+      "postImage": "https://i.pinimg.com/474x/ea/b3/b1/eab3b1671bd96660b3f80044e478fa0c.jpg",
+      "caption": "Studio",
+      "timestamp": "2024-07-02",
+      "userId": 5
+    },
+    {
+      "id": 10,
+      "postImage": "https://i.pinimg.com/474x/a0/08/25/a0082587a9dfe325ed267d3dab05d103.jpg",
+      "caption": "Cassette Collection",
+      "timestamp": "2024-07-02",
+      "userId": 3
+    },
+    {
+      "id": 11,
+      "postImage": "https://i.pinimg.com/474x/ca/f4/cc/caf4cc999d99454d467732c090af8dac.jpg",
+      "caption": "Kaytranada y'all",
+      "timestamp": "2024-07-02",
+      "userId": 4
+    },
+    {
+      "id": 12,
+      "postImage": "https://i.pinimg.com/564x/f3/bd/6c/f3bd6c49c7677f5a57f2a7908e3420cc.jpg",
+      "caption": "Listening to this album",
+      "timestamp": "2024-07-01",
+      "userId": 2
+    },
+    {
+      "id": 13,
+      "postImage": "https://i.pinimg.com/474x/34/50/29/34502933382d7c32ceae1c87d61ba119.jpg",
+      "caption": "King Gizz",
+      "timestamp": "2024-07-01",
+      "userId": 1
+    }
+  ],
+  "calendar": [
+    {
+      "id": 1,
+      "userId": 1,
+      "Date": "06/20/2024",
+      "Band": "Tame Impala",
+      "Location": "The Purple Fiddle"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "Date": "06/25/2024",
+      "Band": "S.G. Goodman",
+      "Location": "The Purple Fiddle"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "Date": "07/18/2024",
+      "Band": "Gillian Welch",
+      "Location": "Higher Ground"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "Date": "08/04/2024",
+      "Band": "LSW",
+      "Location": "Preserving Underground"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "url": "https://i.pinimg.com/474x/cb/91/a8/cb91a839011400b168c5822c74600d90.jpg",
+      "caption": "Tame Impala",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "url": "https://i.pinimg.com/474x/d6/dd/39/d6dd39d777e3de2d8cf6e5e68828b34f.jpg",
+      "caption": "Lucinda Williams",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "url": "https://i.pinimg.com/474x/79/5f/dc/795fdccd6398eabd798ac04cd0d29e9f.jpg",
+      "caption": "The Rolling Stones",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "url": "https://i.pinimg.com/474x/94/e8/d1/94e8d14514cc3d3bdc0c91dd71c20f99.jpg",
+      "caption": "King Gizz",
+      "userId": 1
+    },
+    {
+      "url": "https://cdn.grove.wgbh.org/1f/db/edaad7dd1c1dce6b682debb7e159/joey-santiago-and-black-francis-pixies.jpg",
+      "caption": "Pixies\n",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "url": "https://img.buzzfeed.com/buzzfeed-static/static/2019-09/16/21/asset/25939e970df0/sub-buzz-1192-1568667837-1.jpg?downsize=800:*&output-format=auto&output-quality=auto",
+      "caption": "Jimi Hendrix",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "url": "https://img.buzzfeed.com/buzzfeed-static/static/2019-09/16/21/asset/fba206a28366/sub-buzz-1462-1568668793-1.jpg?downsize=800:*&output-format=auto&output-quality=auto",
+      "caption": "Johnny Cash"
+    }
+  ]
+}

@@ -19,6 +19,10 @@ export const Home = ({ currentUser }) => {
   }, []);
 
   useEffect(() => {
+    document.body.style.backgroundImage = `url(https://i.pinimg.com/564x/52/9d/13/529d132ace2e59bdf2ed756c3ea6cb2b.jpg)`
+  } , [])
+
+  useEffect(() => {
     const foundPosts = posts.filter(
       (post) => post.userId === currentUser.id
     );
@@ -57,7 +61,7 @@ export const Home = ({ currentUser }) => {
                   >
                     <h2>{post.message}</h2>
                     <p>{post.timestamp}</p>
-                    <a href={post.url}>Source</a>
+                    <a href={post.url}>View User Profile</a>
                   </Card>
                 </Col>
               );

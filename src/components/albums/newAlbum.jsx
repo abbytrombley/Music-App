@@ -1,14 +1,16 @@
 import { useState } from "react";
-import "./articles.css";
+import "./album.css";
 import { useNavigate } from "react-router-dom";
-import { createArticle } from "../services/articleservices";
-import { Button } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
+import { createAlbum } from "../../services/albumService";
 
-export const NewArticle = ({currentUser}) => {
-  const [newArticle, setNewArticle] = useState({
-    url: "",
-    title: "",
-    synopsis: "",
+export const NewAlbum = ({currentUser}) => {
+  const [newAlbum, setNewAlbum] = useState({
+    albumName: "",
+    artist: "",
+    genre: "",
+    year: "",
+    imageURL: ""
   });
 
   const navigate = useNavigate()
@@ -16,32 +18,33 @@ export const NewArticle = ({currentUser}) => {
   const handleSave = (event) => {
     event.preventDefault()
 
-    const article = {
-        title: newArticle.title,
-        synopsis: newArticle.synopsis,
-        url: newArticle.url,
-        timestamp: Date(),
+    const album = {
+        albumName: newAlbum.albumName,
+        artist: newAlbum.artist,
+        genre: newAlbum.genre,
+        year: newAlbum.year,
+        imageURL: newAlbum.imageURL,
         userId: currentUser.id
     }
-    createArticle(article).then(() => {
-        navigate("/articles")
+    createAlbum(album).then(() => {
+        navigate("/albums")
     })
 
   }
 
   return (
     <div className="form">
-      <form className="article-form">
-        <h2>New Article</h2>
+      <form className="album-form">
+        <h2 className="new__albums">New Album</h2>
         <fieldset>
           <input
             text="text"
             className="form-control"
-            placeholder="Article Title"
+            placeholder="Album Name"
             onChange={(event) => {
-              const articleCopy = { ...newArticle };
-              articleCopy.title = event.target.value;
-              setNewArticle(articleCopy);
+              const albumCopy = { ...newAlbum };
+              albumCopy.albumName = event.target.value;
+              setNewAlbum(albumCopy);
             }}
           ></input>
         </fieldset>
@@ -49,11 +52,35 @@ export const NewArticle = ({currentUser}) => {
           <input
             text="text"
             className="form-control"
-            placeholder="Summary of Article"
+            placeholder="Artist"
             onChange={(event) => {
-              const articleCopy = { ...newArticle };
-              articleCopy.synopsis = event.target.value;
-              setNewArticle(articleCopy);
+              const albumCopy = { ...newAlbum };
+              albumCopy.artist = event.target.value;
+              setNewAlbum(albumCopy);
+            }}
+          ></input>
+        </fieldset>
+        <fieldset>
+          <input
+            text="text"
+            className="form-control"
+            placeholder="Genre"
+            onChange={(event) => {
+              const albumCopy = { ...newAlbum };
+              albumCopy.genre = event.target.value;
+              setNewAlbum(albumCopy);
+            }}
+          ></input>
+        </fieldset>
+        <fieldset>
+          <input
+            text="text"
+            className="form-control"
+            placeholder="Year"
+            onChange={(event) => {
+              const albumCopy = { ...newAlbum };
+              albumCopy.year = event.target.value;
+              setNewAlbum(albumCopy);
             }}
           ></input>
         </fieldset>
@@ -63,15 +90,15 @@ export const NewArticle = ({currentUser}) => {
             className="form-control"
             placeholder="URL"
             onChange={(event) => {
-              const articleCopy = { ...newArticle };
-              articleCopy.url = event.target.value;
-              setNewArticle(articleCopy);
+              const albumCopy = { ...newAlbum };
+              albumCopy.imageURL = event.target.value;
+              setNewAlbum(albumCopy);
             }}
           ></input>
         </fieldset>
         <fieldset>
           <Button onClick={handleSave}>
-            Submit New Article
+            Submit New Album
           </Button>
         </fieldset>
       </form>
